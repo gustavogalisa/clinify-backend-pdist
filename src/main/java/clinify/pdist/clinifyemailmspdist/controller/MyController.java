@@ -17,6 +17,7 @@ public class MyController {
     @Autowired
     private EmailService emailService;
 
+    @CrossOrigin
     @GetMapping(value = "/sendmail")
     public String sendmail() throws MessagingException {
 
@@ -25,6 +26,7 @@ public class MyController {
         return "emailsent";
     }
 
+    @CrossOrigin
     @PostMapping("/sendPaciente")
     public Paciente sendPaciente(@RequestBody Paciente paciente) {
         Paciente paciente1 = new Paciente();
