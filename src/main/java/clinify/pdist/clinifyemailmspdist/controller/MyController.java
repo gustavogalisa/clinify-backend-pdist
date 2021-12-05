@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.mail.MessagingException;
 
-@CrossOrigin(origins = "*")
 @Controller
 @RestController
 @RequestMapping("/api")
@@ -17,7 +16,6 @@ public class MyController {
     @Autowired
     private EmailService emailService;
 
-    @CrossOrigin
     @GetMapping(value = "/sendmail")
     public String sendmail() throws MessagingException {
 
@@ -26,7 +24,6 @@ public class MyController {
         return "emailsent";
     }
 
-    @CrossOrigin
     @PostMapping("/sendPaciente")
     public Paciente sendPaciente(@RequestBody Paciente paciente) {
         Paciente paciente1 = new Paciente();
