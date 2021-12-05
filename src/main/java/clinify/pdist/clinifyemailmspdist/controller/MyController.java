@@ -32,6 +32,6 @@ public class MyController {
         paciente1.setCode(paciente.getCode());
         paciente1.setAppointmentDate(paciente.getAppointmentDate());
         System.out.println(paciente1);
-        emailService.sendMail(paciente1.getEmail(), "You Got Mail!", "Vem se tratar arrombado!");
+        emailService.sendMail(paciente1.getEmail(), "You Got Mail!", "Ola, "+paciente1.getName() + "!<br> Aqui esta o seu codigo de confirmacao:" + paciente1.getCode() + "<br> Seu exame sera no dia: " + paciente1.getAppointmentDate());
     }
 }

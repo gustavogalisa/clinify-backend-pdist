@@ -15,7 +15,7 @@ class ClinifyEmailMsPdistApplicationTests {
 
     @Test
     public void testEmail () throws MessagingException {
-        emailService.sendMail ("sandoellytonj@gmail.com", "Assunto do teste", "Email de teste");
+        emailService.sendMail("sandy@elela.com", "You Got Mail!", "Ola, Sandy!<br> Aqui esta o seu codigo de confirmacao: A242469<br> Seu exame de prostata sera no dia: 06/12/21");
     }
 
 }
