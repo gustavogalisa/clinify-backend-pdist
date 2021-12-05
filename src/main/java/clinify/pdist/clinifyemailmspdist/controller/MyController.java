@@ -25,13 +25,13 @@ public class MyController {
     }
 
     @PostMapping("/sendPaciente")
-    public Paciente sendPaciente(@RequestBody Paciente paciente) {
+    public void sendPaciente(@RequestBody Paciente paciente) throws MessagingException {
         Paciente paciente1 = new Paciente();
         paciente1.setName(paciente.getName());
         paciente1.setEmail(paciente.getEmail());
         paciente1.setCode(paciente.getCode());
         paciente1.setAppointmentDate(paciente.getAppointmentDate());
-
-        return paciente1;
+        System.out.println(paciente1);
+        emailService.sendMail(paciente1.getEmail(), "You Got Mail!", "Vem se tratar arrombado!");
     }
 }
